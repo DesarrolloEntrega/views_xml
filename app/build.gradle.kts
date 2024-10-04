@@ -1,19 +1,18 @@
 plugins {
-    alias(libs.plugins.android.library)
+    alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
-    `maven-publish`
 }
 
 android {
-    namespace = "com.en_trega.desarrollo.snackbar"
+    namespace = "com.en_trega.desarrollo.app"
     compileSdk = 34
 
     defaultConfig {
+        applicationId = "com.en_trega.desarrollo.app"
         minSdk = 24
-    }
-
-    lint {
         targetSdk = 34
+        versionCode = 1
+        versionName = "1.0"
     }
 
     buildTypes {
@@ -31,19 +30,6 @@ android {
     }
     kotlinOptions {
         jvmTarget = "17"
-    }
-}
-
-afterEvaluate {
-    publishing {
-        publications {
-            create<MavenPublication>("release") {
-                from(components["release"])
-                groupId = "com.github.DesarrolloEntrega"
-                artifactId = "snackbar"
-                version = "1.0.3"
-            }
-        }
     }
 }
 
