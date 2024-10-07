@@ -5,15 +5,14 @@ plugins {
 }
 
 android {
-    namespace = "com.en_trega.desarrollo.snackbar"
+    namespace = "com.en_trega.utils"
     compileSdk = 34
 
     defaultConfig {
         minSdk = 24
-    }
 
-    lint {
-        targetSdk = 34
+        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles("consumer-rules.pro")
     }
 
     buildTypes {
@@ -34,27 +33,28 @@ android {
     }
 }
 
+dependencies {
+    implementation(libs.androidx.core.ktx)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.material)
+    implementation(project(":SnackBar"))
+    testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
+    androidTestImplementation(libs.androidx.espresso.core)
+}
+
 afterEvaluate {
     publishing {
         publications {
             create<MavenPublication>("release") {
                 from(components["release"])
                 groupId = "com.github.DesarrolloEntrega"
-                artifactId = "snackbar"
-                version = "1.0.4"
+                artifactId = "utils"
+                version = "1.0.0"
             }
             repositories {
                 mavenLocal()
             }
         }
     }
-}
-
-dependencies {
-    implementation(libs.androidx.core.ktx)
-    implementation(libs.androidx.appcompat)
-    implementation(libs.material)
-    testImplementation(libs.junit)
-    androidTestImplementation(libs.androidx.junit)
-    androidTestImplementation(libs.androidx.espresso.core)
 }

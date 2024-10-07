@@ -1,21 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="VcsDirectoryMappings">
-    <mapping directory="$PROJECT_DIR$/android-almacen" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/android-almacen_old" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/android-cliente" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/android-inspeccion" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/android-launcher" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/android-operadores" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/android-seguridad" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/android-subarrendado" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/android-ti" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/android-ventas" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/old/Form_android_git" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/old/android_entrega_TI" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/old/android_entrega_launcher" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/old/android_entrega_subarrendado" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/old/android_entrega_ventas" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/ue/views_xml" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$" vcs="Git" />
   </component>
 </project>

@@ -23,3 +23,4 @@ rootProject.name = "Views Xml"
 include(":app")
 include(":SnackBar")
 include(":toast")
+include(":utils")
