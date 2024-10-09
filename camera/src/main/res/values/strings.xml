@@ -1,4 +1,5 @@
 <resources>
+    <string name="app_name">Camera</string>
     <string name="tomar_foto">Tomar Foto</string>
     <string name="previsualizar_imagen">Previsualizar Imagen</string>
     <string name="aceptar">Aceptar</string>
