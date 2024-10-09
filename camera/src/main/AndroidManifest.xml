@@ -14,7 +14,8 @@
 
         <activity
             android:name="com.en_trega.camera.CameraActivity"
-            android:exported="true" />
+            android:exported="true"
+            android:screenOrientation="portrait" />
 
     </application>
 

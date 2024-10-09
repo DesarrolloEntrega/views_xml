@@ -62,7 +62,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.DesarrolloEntrega"
                 artifactId = "camera"
-                version = "1.0.0"
+                version = "1.0.1"
             }
             repositories {
                 mavenLocal()

@@ -38,6 +38,7 @@ import java.util.concurrent.Executors
 
 //TODO: Utilizar mas el ViewModel
 //FIXME: Se pierde el estado al girar la pantalla
+//FIXME: Corregir errores de vista y hacerla responsive
 class CameraActivity : AppCompatActivity() {
     companion object {
         const val EXTRA_CAMERA_PARAMS = "extra_camera_params"
@@ -98,6 +99,7 @@ class CameraActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCameraBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.hide()
 
         cameraParams = intent.getCameraParams() ?: throw IllegalArgumentException("CameraParams are required")
 
