@@ -9,6 +9,10 @@ pluginManagement {
         }
         mavenCentral()
         gradlePluginPortal()
+        maven {
+            url = uri("https://jitpack.io")
+        }
+        jcenter()
     }
 }
 dependencyResolutionManagement {
@@ -16,6 +20,10 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        maven {
+            url = uri("https://jitpack.io")
+        }
+        jcenter()
     }
 }
 
@@ -24,3 +32,4 @@ include(":app")
 include(":SnackBar")
 include(":toast")
 include(":utils")
+include(":camera")

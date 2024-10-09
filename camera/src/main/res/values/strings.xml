@@ -1,0 +1,7 @@
+<resources>
+    <string name="tomar_foto">Tomar Foto</string>
+    <string name="previsualizar_imagen">Previsualizar Imagen</string>
+    <string name="aceptar">Aceptar</string>
+    <string name="reintentar">Reintentar</string>
+    <string name="flash">Flash</string>
+</resources>
