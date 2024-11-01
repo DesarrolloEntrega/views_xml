@@ -7,7 +7,6 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import com.en_trega.camera.CameraActivity
 import com.en_trega.camera.CameraActivityResultContract
 import com.en_trega.camera.CameraParams
 import com.en_trega.desarrollo.app.R
