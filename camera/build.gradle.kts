@@ -51,6 +51,7 @@ dependencies {
     implementation(libs.androidx.exifinterface)
     implementation(project(":SnackBar"))
     testImplementation(libs.junit)
+    debugImplementation(libs.leakcanary.android)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
@@ -62,7 +63,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.DesarrolloEntrega"
                 artifactId = "camera"
-                version = "1.0.1"
+                version = "1.0.12"
             }
             repositories {
                 mavenLocal()

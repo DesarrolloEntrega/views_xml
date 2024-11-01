@@ -49,7 +49,8 @@ class MainActivity : AppCompatActivity() {
             val cameraParams = CameraParams(
                 code = 1,
                 photoPath = "Prueba",
-                photoName = "algoMas"
+                photoName = "algoMas",
+                quality = 90
             )
             cameraActivityResultLauncher.launch(cameraParams)
 //            CameraActivity.deletePictures(this@MainActivity)

@@ -7,5 +7,6 @@ import kotlinx.parcelize.Parcelize
 data class CameraParams(
     val code: Int = 0,
     val photoName: String?,
-    val photoPath: String?
+    val photoPath: String?,
+    val quality: Int = 100
 ) : Parcelable

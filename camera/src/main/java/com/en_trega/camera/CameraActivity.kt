@@ -186,7 +186,7 @@ class CameraActivity : AppCompatActivity() {
 
             val preview = Preview.Builder()
                 .build().also {
-                    it.setSurfaceProvider(previewView.surfaceProvider)
+                    it.surfaceProvider = previewView.surfaceProvider
                 }
 
             imageCapture = ImageCapture.Builder()
@@ -218,8 +218,8 @@ class CameraActivity : AppCompatActivity() {
         val photoFile = createImageFile()
         val outputOptions = ImageCapture.OutputFileOptions.Builder(photoFile).build()
 
-        val flashAnimation = AnimationUtils.loadAnimation(this, R.anim.flash_animation)
-        captureButton.startAnimation(flashAnimation)
+        val captureAnimation = AnimationUtils.loadAnimation(this, R.anim.capture_animation)
+        captureButton.startAnimation(captureAnimation)
 
         imageCapture.takePicture(outputOptions, cameraExecutor, object : ImageCapture.OnImageSavedCallback {
             override fun onImageSaved(output: ImageCapture.OutputFileResults) {
@@ -341,7 +341,8 @@ class CameraActivity : AppCompatActivity() {
 
     private fun Bitmap.toByteArray(): ByteArray {
         val stream = ByteArrayOutputStream()
-        compress(Bitmap.CompressFormat.JPEG, 100, stream)
+        val quality = cameraParams.quality.takeIf { it in 0..100 } ?: 100
+        compress(Bitmap.CompressFormat.JPEG, quality, stream)
         return stream.toByteArray()
     }
 
