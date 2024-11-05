@@ -9,6 +9,7 @@ import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.util.Log
 import android.util.Rational
+import android.util.Size
 import android.view.View
 import android.view.animation.AnimationUtils
 import android.widget.ImageButton
@@ -21,6 +22,8 @@ import androidx.camera.core.ImageCaptureException
 import androidx.camera.core.Preview
 import androidx.camera.core.UseCaseGroup
 import androidx.camera.core.ViewPort
+import androidx.camera.core.resolutionselector.ResolutionSelector
+import androidx.camera.core.resolutionselector.ResolutionStrategy
 import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
 import java.io.ByteArrayOutputStream
@@ -190,6 +193,11 @@ class CameraActivity : AppCompatActivity() {
                 }
 
             imageCapture = ImageCapture.Builder()
+                .setResolutionSelector(
+                    ResolutionSelector.Builder()
+                        .setResolutionStrategy(ResolutionStrategy(Size(3000,4000), ResolutionStrategy.FALLBACK_RULE_CLOSEST_LOWER))
+                        .build()
+                )
                 .setJpegQuality(100)
                 .setFlashMode(if (isFlashOn) ImageCapture.FLASH_MODE_ON else ImageCapture.FLASH_MODE_OFF)
                 .build()
