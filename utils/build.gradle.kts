@@ -50,7 +50,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.DesarrolloEntrega"
                 artifactId = "utils"
-                version = "1.0.1"
+                version = "1.0.2"
             }
             repositories {
                 mavenLocal()
