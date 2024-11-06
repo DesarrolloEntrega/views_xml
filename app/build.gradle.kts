@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "com.en_trega.desarrollo.app"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.en_trega.desarrollo.app"
