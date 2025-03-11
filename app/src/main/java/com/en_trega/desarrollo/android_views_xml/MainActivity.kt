@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        enableEdgeToEdge()
+//        enableEdgeToEdge()
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
@@ -43,6 +43,13 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val metrics = resources.displayMetrics
+        val densityDpi = metrics.densityDpi
+        val screenWidthDp = metrics.widthPixels / (densityDpi / 160)
+
+        Log.d("ScreenSize", "Ancho en dp: $screenWidthDp")
+
 
         binding.startCameraButton.setOnClickListener {
             val cameraParams = CameraParams(
