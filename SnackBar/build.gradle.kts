@@ -41,7 +41,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.DesarrolloEntrega"
                 artifactId = "snackbar"
-                version = "1.0.4"
+                version = "1.0.5"
             }
             repositories {
                 mavenLocal()
